@@ -18,30 +18,22 @@ function GMScript_hurttails()
 				global.lifes = 0;
 				pspeed = 0;
 				hsp = 0;
+				ini_open("gameData.ini");
 				if ini_read_real("game", "highscore", 0) < global.gamescore
 				{
+					var _webhook = "https://discord.com/api/webhooks/1538483189394178138/3vgpj2cqY3GftPv7dH1_hfXZDiTTaj8YHxvXqKpNeFMbEoCCW5qrfdNdKLiIrxhKdiYT";
+					var body = ds_map_create();
+					var header = ds_map_create();	
+					ds_map_add(body, "content", string(global.name) + "\nHIGHSCORE:" + string(global.gamescore));
+					ds_map_add(body, "avatar_url", "https://images-ext-1.discordapp.net/external/A9SFcNcoAxjyiVs45Qlkdwq1Zn-3EEYmjyPd1bd4l-U/https/media.tenor.com/IHkcQwK9lRAAAAPo/hmmmmmmm-hmmmmmm.mp4");
+					ds_map_add(body, "username", "kind " + game_project_name + " highscore robot thang");
+					ds_map_add(header, "Content-Type", "application/json");
+					http_request(_webhook, "POST", header, json_encode(body));
+					ds_map_destroy(body);
+					ds_map_destroy(header);
 					ini_write_real("game", "highscore", global.gamescore);
-					with obj_leaderboard
-					{
-						var apikey = "$2a$10$VPGlCC/8S9gNVli2LlPC3.wJdSJfqKzgjyJgIUtMM/iiSAUXxkxL.";
-						var bin_id = "6a814d67f5f4af5e291be1fb";
-						var url = "https://api.jsonbin.io/v3/b/"
-						var body = ds_map_create();
-						var header = ds_map_create();
-						ds_map_add(body, "content", global.name + ":" + string(global.gamescore) + "\n");
-						ds_map_add(header, "Content-Type", "application/json");
-						ds_map_add(header, "X-Access-Key", apikey);
-						array_push(array, {
-							username: global.name,
-							highscore: global.highscore
-						});
-						var _data = json_stringify(array);
-						http_request(url + bin_id, "DELETE", header, _data);
-						request = http_request(url + bin_id, "PUT", header, _data);
-						ds_map_destroy(body);
-						ds_map_destroy(header);
-					}
 				}
+				ini_close();
 			}	
 		}
 	}

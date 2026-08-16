@@ -1,12 +1,15 @@
-var _webhook = webhook;
-var body = ds_map_create();
-var header = ds_map_create();
-randomize();
-ds_map_add(body, "content", choose("still goin'", "testing progresses", "suprisingly hasn't crashed", "how is it still going???") + "\nFPS:" + string(fps) + "\nPROJECT:" + game_project_name);
-ds_map_add(body, "avatar_url", "https://images-ext-1.discordapp.net/external/rL-PT1liRO9W8A2qIkK-rGD7fyQktoDAyrws2y0lcGk/https/media.tenor.com/FS_t-qo0CY0AAAPo/cat-drooling-meme.mp4");
-ds_map_add(body, "username", "evil game running robot thang");
-ds_map_add(header, "Content-Type", "application/json");
-http_request(_webhook, "POST", header, json_encode(body));
-ds_map_destroy(body);
-ds_map_destroy(header);
+if global.debug
+{
+	var _webhook = webhook;
+	var body = ds_map_create();
+	var header = ds_map_create();
+	randomize();
+	ds_map_add(body, "content", choose("still goin'", "testing progresses", "suprisingly hasn't crashed", "how is it still going???") + "\nFPS:" + string(fps) + "\nPROJECT:" + game_project_name);
+	ds_map_add(body, "avatar_url", "https://images-ext-1.discordapp.net/external/rL-PT1liRO9W8A2qIkK-rGD7fyQktoDAyrws2y0lcGk/https/media.tenor.com/FS_t-qo0CY0AAAPo/cat-drooling-meme.mp4");
+	ds_map_add(body, "username", "evil game running robot thang");
+	ds_map_add(header, "Content-Type", "application/json");
+	http_request(_webhook, "POST", header, json_encode(body));
+	ds_map_destroy(body);
+	ds_map_destroy(header);
+}
 alarm[0] = 60;

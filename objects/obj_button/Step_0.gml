@@ -2,8 +2,6 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + (image_xscale * 96), y + (imag
 {
 	if  mouse_check_button_pressed(mb_left)
 	{
-		if os_type != os_android
-		{
 			switch button
 			{
 				case 0:
@@ -11,31 +9,16 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + (image_xscale * 96), y + (imag
 						instance_create(x, y, obj_fadeout);
 					break;
 				case 1:
-					ini_open("gameData.ini");
-					global.fullscreen = !global.fullscreen;
-					ini_write_real("settings", "fullscreen", global.fullscreen);
-					ini_close();
-					window_set_fullscreen(global.fullscreen);
+					obj_world_dupe.gonermaker = 1;
 					break;
 				case 2:
+					url_open("https://discord.gg/dYgHfgXDJX");
+					break;
+				case 3:
 					game_end();
 					break;
 			}
-		}
-		else
-		{
-			switch button
-			{
-				case 0:
-					if !instance_exists(obj_fadeout)
-						instance_create(x, y, obj_fadeout);
-					break;
-				case 1:
-					game_end();
-					break;
-			}
-		}
-
+		
 		scr_sfx(sfx_halfscore, 0)
 	}
 	image_xscale = lerp(image_xscale, 2, 0.1);

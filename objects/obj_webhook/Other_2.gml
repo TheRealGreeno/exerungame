@@ -1,11 +1,14 @@
-var _webhook = webhook;
-var body = ds_map_create();
-var header = ds_map_create();
-randomize();
-ds_map_add(body, "content", choose("wowie " + game_project_name + " hath startinged", game_project_name + " actually started", "it prolly crashed instantly", "believe it or not " + game_project_name + " started"));
-ds_map_add(body, "avatar_url", "https://images-ext-1.discordapp.net/external/NZaEzhX7ApyMxuzOwXm-6VVJ7T5JgbrfVyt5El3XWxA/https/static.klipy.com/ii/e293a233a303a98e471f78d04e13a1b0/b2/db/dU0K6HBiIFZNzCtD.mp4");
-ds_map_add(body, "username", "evil game start robot thang");
-ds_map_add(header, "Content-Type", "application/json");
-http_request(_webhook, "POST", header, json_encode(body));
-ds_map_destroy(body);
-ds_map_destroy(header);
+if global.debug
+{
+	var _webhook = webhook;
+	var body = ds_map_create();
+	var header = ds_map_create();
+	randomize();
+	ds_map_add(body, "content", choose("wowie " + game_project_name + " hath startinged", game_project_name + " actually started", "it prolly crashed instantly", "believe it or not " + game_project_name + " started"));	
+	ds_map_add(body, "avatar_url", "https://images-ext-1.discordapp.net/external/NZaEzhX7ApyMxuzOwXm-6VVJ7T5JgbrfVyt5El3XWxA/https/static.klipy.com/ii/e293a233a303a98e471f78d04e13a1b0/b2/db/dU0K6HBiIFZNzCtD.mp4");
+	ds_map_add(body, "username", "evil game start robot thang");
+	ds_map_add(header, "Content-Type", "application/json");
+	http_request(_webhook, "POST", header, json_encode(body));
+	ds_map_destroy(body);
+	ds_map_destroy(header);
+}
