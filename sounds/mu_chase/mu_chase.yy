@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_chase",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":64.02903,
+  "exportDir":"",
+  "name":"mu_chase",
+  "parent":{
+    "name":"exerungame",
+    "path":"exerungame.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":5512,
+  "soundFile":"mu_chase.ogg",
+  "volume":1.0,
+}

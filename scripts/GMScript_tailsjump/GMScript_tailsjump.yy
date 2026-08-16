@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GMScript_tailsjump",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMScript_tailsjump",
+  "parent":{
+    "name":"exerungame",
+    "path":"exerungame.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

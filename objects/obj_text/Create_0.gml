@@ -1,0 +1,10 @@
+text = "";
+font = fnt_bigsans;
+color = c_white;
+Title = 0;
+global.gamescore = -1;
+global.lifes = 10;
+pal_swap_init_system(shd_pal_swapper, shd_pal_html_sprite, shd_pal_html_surface);
+ini_open("gameData.ini");
+global.highscore = ini_read_real("game", "highscore", 0);
+ini_close();

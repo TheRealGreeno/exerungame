@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GMScript_qol",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GMScript_qol",
+  "parent":{
+    "name":"exerungame",
+    "path":"exerungame.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

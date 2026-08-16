@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"mu_menu",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":62.972607,
+  "exportDir":"",
+  "name":"mu_menu",
+  "parent":{
+    "name":"exerungame",
+    "path":"exerungame.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":5512,
+  "soundFile":"mu_menu.ogg",
+  "volume":1.0,
+}
