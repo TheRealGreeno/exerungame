@@ -4,6 +4,7 @@ function GMScript_tailsjump()
 	if char = "S" && keyjump2 && !shield && !dropdash
 	{
 		dropdash = 1;
+		scr_sfx(sfx_dropdashcharge, 0);
 		sprite_index = spr_sonic_dropdash;
 	}
 	if dropdash
@@ -20,6 +21,8 @@ function GMScript_tailsjump()
 	if flight
 	{
 		sprite_index = flightburst > 0 ? spr_tails_flight : spr_tails_flighttired;
+		if !audio_is_playing(sfx_tailsfly) && !audio_is_playing(sfx_tailstiredfly)
+			scr_sfx(flightburst > 0 ? sfx_tailsfly : sfx_tailstiredfly, 0);
 		if keydown2
 		{
 			flight = 0;

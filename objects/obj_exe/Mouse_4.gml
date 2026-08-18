@@ -7,7 +7,9 @@ if room = title
 		else if exe = "R"
 			exe = "F";
 		else if exe = "F"
-			exe = "S";
+			exe = "W";
+		else if exe = "W"
+			exe = "S"
 		global.exe = exe;
 		GMScript_exespr();
 		sprite_index = spr_dash;

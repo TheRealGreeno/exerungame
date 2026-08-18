@@ -17,5 +17,10 @@ function GMScript_exespr()
 			spr_roll = spr_robotnik_fall;
 			spr_defeat = spr_robotnik_defeat;
 			break;
+		case "W":
+			spr_dash = spr_wario_dash;
+			spr_roll = spr_wario_fall;
+			spr_defeat = spr_wario_defeat;
+			break;
 	}
 }

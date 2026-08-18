@@ -7,6 +7,12 @@ if instance_exists(obj_tails)
 		grav = !flowery ? 0.4 : 0.1
 		if gotime && y >= 206
 			espeed = obj_tails.maxspeed;
+		if gotime && !soundplayed && flowery
+		{
+			randomize();
+			scr_sfx(choose(snd_flowery_voiceclip_hereicome, snd_flowery_voiceclip_hereicomesanfrandisc, snd_flowery_voiceclip_hereicomesanfrandisco_strong, snd_flowery_voiceclip_hereicomesanfrandisco_weak, snd_flowery_voiceclip_hey_boys, snd_flowery_voiceclip_heytherelittleguy), 0);
+			soundplayed = 1;
+		}
 		if x < 64
 			hsp = espeed * 0.4;
 		else
@@ -97,8 +103,10 @@ if exe = "S"
 	exenum = 0;
 else if exe = "R"
 	exenum = 1;
-else
+else if exe = "F"
 	exenum = 2;
+else
+	exenum = 3;
 if room = title
 	mask_index = spr_dash;
 else

@@ -6,5 +6,5 @@ if image_index != 1
 	ini_open("gameData.ini");
 	ini_write_string("playerinfo", "unlockedpalettes", global.unlockedpalettes);
 	ini_close();
-	alarm[0] = 250;
+	alarm[0] = 200;
 }

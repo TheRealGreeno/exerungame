@@ -60,8 +60,7 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + (image_xscale * 16), y + (imag
 					ini_close();
 					break;
 			}
-			scr_sfx(sfx_halfscore, 0);
-			scr_sfx(sfx_ring, 0);
+			scr_sfx(sfx_ringspent, 0);
 			global.ring -= price
 			ini_open("gameData.ini");
 			ini_write_real("game", "ring", global.ring);

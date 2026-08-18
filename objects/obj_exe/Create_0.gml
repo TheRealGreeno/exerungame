@@ -9,6 +9,7 @@ gotime = 0;
 xscale = 1;
 yscale = 1;
 alpha = 1;
+soundplayed = 0;
 randomize();
 jokevoiceline = irandom_range(1, 100);
 flowery = irandom_range(-50, 1);
@@ -23,7 +24,7 @@ GMScript_exespr();
 palselect = global.exepalette;
 paltoselect = global.exepalette;
 exenum = 0;
-exename = ["2011X", "ROBOTNIK", "FLOWERY"];
+exename = ["2011X", "ROBOTNIK", "FLOWERY", "WARIO"];
 palettename = ["THE ONE AND ONLY", "BIT BLUE TODAY", "THESE SOULS ARE\nTURNING MY QUILLS GRAY!", "I'M NICE...", "ORANGE PUNCHER", "CENSORED FOR YOUTUBE:)", "X1102", "AN ODE TO THE FOX", "HE'S SO FUCKING BLUE", "PALE X", "SUPER X", "BLOOD COVERED", "MARIJUANA X", "RED HOT X", "POLYESTER X"];
 pal_swap_init_system(shd_pal_swapper, shd_pal_html_sprite, shd_pal_html_surface);
 if instance_exists(obj_tails)
