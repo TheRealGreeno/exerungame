@@ -1,6 +1,6 @@
 visible = obj_tails.shield;
-x = obj_tails.x - 2;
-y = obj_tails.y + 10;
+x = obj_tails.x + 2;
+y = obj_tails.y + 5;
 overlayf += 0.5;
 if active
 	activef += 0.5;

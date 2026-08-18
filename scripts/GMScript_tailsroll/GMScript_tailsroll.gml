@@ -1,7 +1,6 @@
 function GMScript_tailsroll()
 {
-	sprite_index = spr_tails_roll
-	tails = 1;
+	sprite_index = spr_roll
 	if pspeed > 2
 	{
 		pspeed -= 0.01;
@@ -11,6 +10,6 @@ function GMScript_tailsroll()
 	{
 		state = 1;
 		scr_sfx(sfx_jump, 0);
-		vsp -= 8;
+		vsp -= jumpheight;
 	}
 }

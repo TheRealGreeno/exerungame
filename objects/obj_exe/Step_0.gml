@@ -3,10 +3,10 @@ if instance_exists(obj_tails)
 	if !obj_tails.dead
 	{
 		if !gotime
-			sprite_index = !flowery ? spr_exe_roll : spr_flowery_intro;
+			sprite_index = spr_roll;
 		grav = !flowery ? 0.4 : 0.1
 		if gotime && y >= 206
-			espeed = 25;
+			espeed = obj_tails.maxspeed;
 		if x < 64
 			hsp = espeed * 0.4;
 		else
@@ -19,7 +19,7 @@ if instance_exists(obj_tails)
 			vsp += grav;
 		if y > 206
 		{
-			sprite_index = !flowery ? spr_exe_dash : spr_flowery_dash;
+			sprite_index = spr_dash;
 			vsp = 0;
 			y = 206;
 			if !landed
@@ -30,6 +30,7 @@ if instance_exists(obj_tails)
 						instance_create(x, y, obj_debris);
 					scr_sfx(sfx_hardland);
 					scr_sfx(sfx_land);
+					obj_camera.shake = 40;
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
 				}
@@ -46,7 +47,7 @@ if instance_exists(obj_tails)
 	}
 	else
 	{
-		sprite_index = !flowery ? spr_exe_intro : spr_flowery_defeat;
+		sprite_index = spr_defeat;
 		image_speed = 1;
 	}
 }
@@ -54,11 +55,11 @@ else
 {
 	if gotime && y >= 206
 		espeed = 30;
-	if x < 64
+	if x < 96
 		hsp = espeed * 0.4;
 	else
 		hsp = espeed * 0.001;
-	if x < 192
+	if x < 96
 		x += hsp;
 	if gotime
 		y += vsp;
@@ -66,18 +67,18 @@ else
 		vsp += grav;
 	if y > 206
 	{
-		sprite_index = !flowery ? spr_exe_dash : spr_flowery_dash;
+		sprite_index = spr_dash;
 		vsp = 0;
 		y = 206;
 		if !landed
 		{
-			repeat irandom_range(5, 10)
-				instance_create(x, y, obj_debris);
 			scr_sfx(sfx_hardland);
 			scr_sfx(sfx_land);
 			landed = 1;
 		}
 	}
+	xscale = lerp(xscale, 1, 0.1);
+	yscale = lerp(yscale, 1, 0.1);
 	if espeed < 10
 		image_speed = espeed * 0.1;
 	else
@@ -88,3 +89,17 @@ if keyboard_check_pressed(ord("3")) && global.debug
 	randomize();
 	flowery = irandom_range(-50, 1);
 }
+if exe = "F"
+	flowery = 1;
+else
+	flowery = 0;
+if exe = "S"
+	exenum = 0;
+else if exe = "R"
+	exenum = 1;
+else
+	exenum = 2;
+if room = title
+	mask_index = spr_dash;
+else
+	mask_index = mask_exe;

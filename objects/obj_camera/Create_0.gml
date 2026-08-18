@@ -7,7 +7,8 @@ _x = 0;
 _y = 0;
 minutes = 0;
 seconds = 0;
-move = 0
+move = 0;
+shake = 0;
 alarm[0] = 60;
 ini_open("gameData.ini");
 global.fullscreen = ini_read_real("settings", "fullscreen", 1);

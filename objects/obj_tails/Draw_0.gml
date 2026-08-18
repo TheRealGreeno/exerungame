@@ -1,7 +1,8 @@
 if !obj_shield.active
-	draw_sprite(shieldspr, obj_shield.shieldf, x - 2, y + 10)
-pal_swap_set(palette_tails, palselect, 0)
+	draw_sprite(shieldspr, obj_shield.shieldf, x + 2, y + 5)
+pal_swap_set(spr_palette, palselect, 0);
+tailsflyf++;
 if tails
-	draw_sprite_ext(spr_tail_still, -1, x, y - 20, 1, 1, tailrot, c_white, 1)
-draw_self()
-shader_reset()
+	draw_sprite_ext(!flight ? spr_tail_still : spr_tailsfly, !flight ? -1 : tailsflyf, x, y - 20, 1, 1, !flight ? tailrot : 0, c_white, 1);
+draw_self();
+shader_reset();

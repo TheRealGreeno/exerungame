@@ -5,6 +5,5 @@ if !other.dead
 	with other
 	{
 		GMScript_hurttails();
-		scr_sfx(sfx_deathscream, 0);
 	}
 }

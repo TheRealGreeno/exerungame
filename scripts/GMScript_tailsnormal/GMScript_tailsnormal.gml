@@ -1,6 +1,5 @@
 function GMScript_tailsnormal()
 {
-	tails = 0;
 	if !dead
 	{
 		hsp = pspeed * 0.01
@@ -9,7 +8,7 @@ function GMScript_tailsnormal()
 		else
 			image_speed = 1;
 
-		if pspeed < 25
+		if pspeed < maxspeed
 		{
 			if powerup != 2
 				pspeed += !obj_exe.gotime ? 0.01 : 1.5;
@@ -17,17 +16,17 @@ function GMScript_tailsnormal()
 				pspeed += !obj_exe.gotime ? 0.1 : 2.5;
 		}
 
-		if pspeed < 5
-			sprite_index = spr_tails_walk;
-		else if pspeed < 10
-			sprite_index = spr_tails_dash;
+		if pspeed < maxspeed / 4
+			sprite_index = spr_walk;
+		else if pspeed < maxspeed / 2
+			sprite_index = spr_dash;
 		else
-			sprite_index = spr_tails_topspeed;
+			sprite_index = spr_topspeed;
 		if keyjump2 or jumpbuffer > 0
 		{
 			state = 1;
 			scr_sfx(sfx_jump, 0);
-			vsp -= 8;
+			vsp -= jumpheight;
 			hsp += 0.2;
 			pspeed += 0.2;
 		}

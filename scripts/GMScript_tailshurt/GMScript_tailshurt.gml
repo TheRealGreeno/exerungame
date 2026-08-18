@@ -1,8 +1,13 @@
 function GMScript_tailshurt()
 {
-	sprite_index = spr_tails_hurt;
+	sprite_index = spr_hurt;
 	image_speed = 1;
-	tails = 0;
+	grav = 0.4;
+	flight = 0;
+	flightburst = 0;
+	dropdash = 0;
+	glide = 0;
+	glideslam = 0;
 	if y > 206
 	{
 		state = 0;

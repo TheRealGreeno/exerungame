@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"ground_labyrinth",
   "bboxMode":0,
-  "bbox_bottom":255,
+  "bbox_bottom":287,
   "bbox_left":0,
   "bbox_right":255,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":256,
+  "height":288,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"15c514a5-cf8b-4630-b0cf-c690902e0b8c","blendMode":0,"displayName":"default","isLocked":false,"name":"15c514a5-cf8b-4630-b0cf-c690902e0b8c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

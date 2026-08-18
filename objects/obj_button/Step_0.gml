@@ -12,7 +12,11 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + (image_xscale * 96), y + (imag
 					obj_world_dupe.gonermaker = 1;
 					break;
 				case 2:
-					url_open("https://discord.gg/dYgHfgXDJX");
+					if !instance_exists(obj_fadeout)
+					{
+						with instance_create(x, y, obj_fadeout)
+							roomgo = shop;
+					}
 					break;
 				case 3:
 					game_end();

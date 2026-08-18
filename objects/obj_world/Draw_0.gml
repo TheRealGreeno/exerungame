@@ -29,11 +29,11 @@ switch room
 		shader_reset();
 		break;
 	case labyrinth:
-		draw_sprite_ext(bg_labyrinth0, 0, bg2x, 6, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_labyrinth0, 0, bg4x, 6, 9999, 1, 0, c_white, 1);
 		draw_sprite_ext(bg_labyrinth1, 0, bg3x, 54, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_labyrinth2, 0, bg4x, 85, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_labyrinth2, 0, bg2x, 85, 9999, 1, 0, c_white, 1);
 		draw_sprite_ext(bg_labyrinth3, 0, bg3x, 149, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_labyrinth4, 0, bg2x, 180, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_labyrinth4, 0, bg4x, 180, 9999, 1, 0, c_white, 1);
 		break;
 }
 fireef += 0.4;

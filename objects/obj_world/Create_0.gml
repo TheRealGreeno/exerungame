@@ -7,6 +7,7 @@ bg5x = 0;
 groundx = 0;
 palselect = 1;
 reverse = 0;
+targetgamescore = 0;
 global.seconds = -1;
 obstaclearray = [obj_evilwhiteball, obj_groundpillar, obj_rock];
 enemyarray = [obj_fuckingball, obj_sharkguy, obj_spikes, obj_spikeball];
