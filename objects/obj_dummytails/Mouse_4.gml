@@ -8,6 +8,7 @@ if !global.palettemode
 		char = "T";
 	GMScript_characterspr();
 	global.char = char;
+	global.palselect = palselect;
 	ini_open("gameData.ini");
 	ini_write_string("playerinfo", "char", global.char);
 	ini_close();

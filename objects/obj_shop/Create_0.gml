@@ -1,0 +1,15 @@
+charname = ["TAILS", "KNUX", "SONIC", "2011X"];
+palettename = [["ALAN", "DAVE", "PAUL", "ONE OF MANY"], ["CLASSIC SHOES", "BLUE SOCKS", "BLUE SHOES", "BIT BLUE TODAY"], ["LACK O' COLOR THEORY", "RED KNUCKLES", "IMITATION SHOES", "THESE SOULS ARE\nTURNING MY QUILLS GRAY!"], ["SEE HE'S FINE!", "RED SOCKS", "ORANGE SHOES", "I'M NICE..."], ["SUPER SHOES", "NPC KNUX", "THE HEDGEHOG", "ORANGE PUNCHER"], ["SIMPLE AND SLEEK", "CRIMSON KNUX", "GREEN SHOES" , "CENSORED FOR YOUTUBE:)"], ["FEELIN' BLUE", "EVAD", "HELLHOG", "X1102"], ["NALA", "SILVER KNUCKLE", "SILVER SONIC", "AN ODE TO THE FOX"], ["DARK FOX", "KNUX WITH JAUNDICE", "JAUNDICE SONIC", "HE'S SO FUCKING BLUE"], ["THE BROWN FOX JUMPED\nOVER THE LAZY EXE", "PISSKLES", "LABYRINTH BLUES", "PALE X"], ["PISS TAILS", "MARIJKNUCKLES", "MARIJONIC", "SUPER X"], ["BLOODY FOX", "GRUCKLES", "SUPER SONIC", "BLOOD COVERED X"], ["SHAMBLING FOX", "BLUCKLES", "HIS BEST FRIEND", "MARIJUANA X"], ["FIREFOX", "JA     ORANGE", "HIS BEST ENEMY", "RED HOT X"], ["POLYESTER TAILS", "POLYESTER KNUCKLES", "POLYESTER SONIC", "POLYESTER X"]];
+pricearray = [0, 10, 10, 10, 10, 10, 25, 25, 25, 25, 40, 40, 40, 40, 100];
+palselect = 1;
+spr_palette = [palette_tails, palette_knuckles, palette_sonic, palette_exe];
+char = 0;
+charsprites = [[spr_tails_walk, spr_tails_dash, spr_tails_hurt], [spr_knuckles_walk, spr_knuckles_dash, spr_knuckles_hurt], [spr_sonic_walk, spr_sonic_dash, spr_sonic_hurt], [spr_exe_dash, spr_exe_intro, spr_exe_dash]];
+spr_char = charsprites[char, irandom_range(0, 2)];
+xscale = 1;
+yscale = 1;
+prevchar = char;
+image_speed = 0.2;
+ini_open("gameData.ini");
+purchased = json_parse(ini_read_string("shopinfo", "purchased", [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]));
+ini_close();

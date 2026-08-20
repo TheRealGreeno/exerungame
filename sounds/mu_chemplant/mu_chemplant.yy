@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mu_calm",
+  "%Name":"mu_chemplant",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":99.091255,
+  "duration":127.36157,
   "exportDir":"",
-  "name":"mu_calm",
+  "name":"mu_chemplant",
   "parent":{
     "name":"exerungame",
     "path":"exerungame.yyp",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":5512,
-  "soundFile":"mu_calm.ogg",
+  "soundFile":"mu_chemplant.ogg",
   "volume":1.0,
 }

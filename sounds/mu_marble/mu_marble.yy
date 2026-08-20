@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"mu_calmOLD",
+  "%Name":"mu_marble",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":60.011974,
+  "duration":120.16328,
   "exportDir":"",
-  "name":"mu_calmOLD",
+  "name":"mu_marble",
   "parent":{
     "name":"exerungame",
     "path":"exerungame.yyp",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":5512,
-  "soundFile":"mu_calmOLD.ogg",
+  "soundFile":"mu_marble.ogg",
   "volume":1.0,
 }

@@ -21,6 +21,7 @@ if room = title
 			palselect = 0;
 		else
 			palselect = ini_read_real("exeinfo", "exepalette", 0);
+		global.exepalette = palselect;
 		ini_close();
 		scr_sfx(sfx_halfscore, 0);
 		xscale = 2;

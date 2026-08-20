@@ -16,17 +16,13 @@ ini_open("gameData.ini");
 if ini_read_string("playerinfo", "unlockedpalettes", 0) = 0
 {
 	randomize();
-	global.unlockedpalettes = [[0, 0, 0, 0], [irandom_range(1, 14), irandom_range(1, 14), irandom_range(1, 14), irandom_range(1, 14)], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
-	global.palettesunlocked = [[0, 0, 0, 0], [global.unlockedpalettes[1][0], global.unlockedpalettes[1][1], global.unlockedpalettes[1][2], global.unlockedpalettes[1][3]], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
+	global.unlockedpalettes = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
 	ini_write_string("playerinfo", "unlockedpalettes", global.unlockedpalettes);
-	ini_write_string("playerinfo", "palettesunlocked", global.palettesunlocked);
 }
 else
 {
 	var _unlockedpal = ini_read_string("playerinfo", "unlockedpalettes", [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0]]);
-	var _palunlocked = ini_read_string("playerinfo", "unlockedpalettes", [[0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 1, 1], [0, 0, 0, 0]]);
 	global.unlockedpalettes = json_parse(_unlockedpal);
-	global.palettesunlocked = json_parse(_palunlocked);
 }
 ini_close();
 charname = ["TAILS", "KNUCKLES", "SONIC"]

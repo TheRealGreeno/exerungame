@@ -23,22 +23,7 @@ function GMScript_hurttails()
 				hsp = 0;
 				ini_open("gameData.ini");
 				if ini_read_real("game", "highscore", 0) < global.gamescore
-				{
 					ini_write_real("game", "highscore", global.gamescore);
-					instance_create(240, 135, obj_gamble);
-				}
-				else if global.gamescore >= ini_read_real("game", "highscore", 0) / 2
-				{
-					var chance = irandom_range(1, 2);
-					if chance = 1
-						instance_create(240, 135, obj_gamble);
-				}
-				else
-				{
-					var chance = irandom_range(1, 10);
-					if chance = 1
-						instance_create(240, 135, obj_gamble);
-				}
 				ini_close();
 			}	
 		}

@@ -19,7 +19,9 @@ draw_text(240, 0, "SCORE:" + string(global.gamescore));
 draw_set_font(fnt_smallsans);
 var highscoreadd = string(global.gamescore - global.highscore);
 draw_text(240, 40, "HIGHSCORE:" + string(global.highscore) + (global.gamescore > global.highscore ? (" + " + highscoreadd) : ""));
+pal_swap_set(obj_tails.spr_palette, obj_tails.palselect, 0);
 draw_sprite_ext(spr_gamble_icons_dupe, lifeicon, 40, 10, 2, 2, 0, c_white, 1);
+shader_reset();
 draw_text(50, 40, "HEALTH:" + string(global.lifes));
 draw_text(400, 0, "RINGS:" + string(global.ring));
 if global.combo > 0

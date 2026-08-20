@@ -1,0 +1,13 @@
+depth = 200;
+draw_set_alpha(0.5);
+var c = c_black;
+draw_rectangle_color(0, 60, 480, 270, c, c, c, c, 0);
+draw_set_alpha(1);
+pal_swap_set(spr_palette[char], palselect, 0);
+draw_sprite_ext(spr_char, -1, 240, 135, xscale, yscale, 0, c_white, 1);
+shader_reset();
+draw_set_font(fnt_smallsans);
+draw_set_halign(fa_center);
+draw_text(240, 80, string(charname[char]));
+draw_text(240, 155, string(palettename[palselect, char]) + "\nPRICE:" + string(pricearray[palselect]));
+draw_set_halign(fa_left);

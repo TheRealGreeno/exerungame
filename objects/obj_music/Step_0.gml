@@ -35,7 +35,21 @@ if global.mu != noone
 	}
 	if !obj_exe.gotime && room = greenhill && dummyvar
 		audio_sound_pitch(mu_greenhill, 1 - (global.seconds * 0.005))
-	chasemu = !obj_exe.flowery ? mu_chase : mu_flowerman;
+	switch obj_exe.exe
+	{
+		case "S":
+			chasemu = mu_chase;
+			break;
+		case "R":
+			chasemu = mu_robotnikchase;
+			break;
+		case "F":
+			chasemu = mu_flowerman;
+			break;
+		case "W":
+			chasemu = mu_wariochase;
+			break;
+	}
 	if obj_exe.gotime && !audio_is_playing(chasemu)
 	{
 		audio_stop_all()
