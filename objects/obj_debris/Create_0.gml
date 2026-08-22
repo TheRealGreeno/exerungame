@@ -9,5 +9,5 @@ xscale = 1;
 yscale = 1;
 livetime = 250;
 image_speed = 0;
-if room = labyrinth
-	sprite_index = spr_labyrinthdebris;
+if room != greenhill
+	sprite_index = asset_get_index("spr_" + room_get_name(room) + "debris")

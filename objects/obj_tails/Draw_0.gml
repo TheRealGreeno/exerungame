@@ -1,5 +1,5 @@
 if !obj_shield.active
-	draw_sprite(shieldspr, obj_shield.shieldf, x + 2, y + 5)
+	draw_sprite(shieldspr, obj_shield.shieldf, obj_shield.x, obj_shield.y)
 pal_swap_set(spr_palette, palselect, 0);
 tailsflyf++;
 if tails

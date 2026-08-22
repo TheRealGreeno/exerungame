@@ -79,9 +79,9 @@ if global.debug = 1
 			contained = 1;
 	}
 	if keyboard_check_pressed(ord("6"))
-	{
-		global.lifes = 1;
-	}
+		global.lifes++;
+	if keyboard_check_pressed(ord("7"))
+		pspeed = 99;
 }
 if powerup = 1
 	instance_create(x + irandom_range(-32, 32), y + irandom_range(-48, 16), obj_invincibilityeffect)

@@ -36,11 +36,12 @@ if instance_exists(obj_tails)
 						instance_create(x, y, obj_debris);
 					scr_sfx(sfx_hardland);
 					scr_sfx(sfx_land);
-					obj_camera.shake = 40;
+					obj_camera.shake = 80;
+					instance_create(x, y, obj_FOUNDYOU);
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
 				}
-				instance_create(x, y, obj_whitefade)
+				instance_create(x, y, obj_whitefade);
 				landed = 1;
 			}
 		}
@@ -105,9 +106,19 @@ else if exe = "R"
 	exenum = 1;
 else if exe = "F"
 	exenum = 2;
-else
+else if exe = "W"
 	exenum = 3;
+else if exe = "P"
+	exenum = 4;
+else
+	exenum = 5;
+if exe != "S"
+	palselect = 0;
 if room = title
 	mask_index = spr_dash;
 else
 	mask_index = mask_exe;
+if textfade && textalpha > 0
+	textalpha -= 0.1;
+else if !textfade && textalpha < 1
+	textalpha += 0.1;

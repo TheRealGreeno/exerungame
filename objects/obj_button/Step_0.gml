@@ -5,8 +5,12 @@ if point_in_rectangle(mouse_x, mouse_y, x, y, x + (image_xscale * 96), y + (imag
 			switch button
 			{
 				case 0:
+					randomize();
 					if !instance_exists(obj_fadeout)
-						instance_create(x, y, obj_fadeout);
+					{
+						with instance_create(x, y, obj_fadeout)
+							roomgo = global.levels[irandom_range(0, array_length(global.levels) - 1)];
+					}
 					break;
 				case 1:
 					if !instance_exists(obj_fadeout)

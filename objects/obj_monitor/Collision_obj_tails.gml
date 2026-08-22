@@ -1,14 +1,21 @@
 if other.state = 1 or other.state = 2
 {
 	instance_create(x, y - 12, obj_boom);
+	with instance_create(x, y, obj_debris)
+	{
+		sprite_index = spr_monitor;
+		image_index = 1;
+	}
 	instance_destroy();
 	obj_camera.shake = 10;
+	if obj_tails.vsp > 0
+		obj_tails.vsp = -obj_tails.vsp;
 	if contained <= 2 && contained > 0
 	{
 		other.powerup = contained;
 		other.alarm[1] = 1650;
 	}
-	else if contained > 0
+	else if contained > 0 && contained < 6
 	{
 		other.shield = contained - 2;
 		switch other.shield
@@ -24,6 +31,8 @@ if other.state = 1 or other.state = 2
 				break;
 		}
 	}
+	else if contained > 0
+		global.lifes++;
 	else
 	{
 		global.ring += 10;

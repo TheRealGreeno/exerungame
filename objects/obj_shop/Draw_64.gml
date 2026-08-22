@@ -9,5 +9,7 @@ shader_reset();
 draw_set_font(fnt_smallsans);
 draw_set_halign(fa_center);
 draw_text(240, 80, string(charname[char]));
-draw_text(240, 155, string(palettename[palselect, char]) + "\nPRICE:" + string(pricearray[palselect]));
+var owned = array_contains(purchased[palselect], palselect, char, 1);
+var toopricey = global.ring < pricearray[palselect];
+draw_text(240, 155, string(palettename[palselect, char]) + (!owned ? "\nPRICE:" + string(pricearray[palselect]) : "\nOWNED"));
 draw_set_halign(fa_left);

@@ -5,14 +5,6 @@ bg3x = groundx * 0.07;
 bg2x = groundx * 0.05;
 bg1x = groundx * 0.03;
 bg0x = groundx * 0.01;
-if palselect < 3 && !reverse
-	palselect += 0.1;
-else
-	reverse = 1;
-if palselect > 1 && reverse
-	palselect -= 0.1;
-else
-	reverse = 0;
 
 draw_sprite_ext(bg_greenhill1, 0, bg1x, -8, 9999, 1, 0, c_white, 1);
 draw_sprite_ext(bg_greenhill2, 0, bg2x, 8, 9999, 1, 0, c_white, 1);

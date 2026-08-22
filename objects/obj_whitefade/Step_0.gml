@@ -7,19 +7,20 @@ if fadealpha >= 1 && !fadeout
 {
 	if !obj_exe.flowery
 	{
-		layer_set_visible("Effect_1", true);
-		layer_set_visible("Effect_2", true);
-		layer_set_visible("Effect_3", true);
-		layer_set_visible("Effect_4", false);
-		layer_set_visible("Effect_5", true);
-		obj_world.burning = 1;
+		layer_set_visible("firecolor", true);
+		layer_set_visible("heatwavefg", true);
+		layer_set_visible("heatwavebg", true);
+		layer_set_visible("glow", false);
+		layer_set_visible("chaseglow", true);
+		if room = chemplant or room = greenhill
+			obj_world.burning = 1;
 	}
 	else
 	{
-		layer_set_visible("Effect_6", true);
-		layer_set_visible("Effect_7", true);
-		layer_set_visible("Effect_4", false);
-		layer_set_visible("Effect_5", true);
+		layer_set_visible("chaseglow", true);
+		layer_set_visible("flowerycolor", true);
+		layer_set_visible("glow", false);
+		layer_set_visible("flowerypetal", true);
 	}
 	fadeout = 1;
 }

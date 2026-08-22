@@ -15,6 +15,8 @@ if !global.palettemode
 	scr_sfx(sfx_halfscore, 0);
 	xscale = 2;
 	yscale = 0.5;
+	textfade = 0;
+	alarm[0] = 60;
 }
 else
 {
@@ -32,4 +34,6 @@ else
 	xscale = 2;
 	yscale = 0.5;
 	scr_sfx(sfx_halfscore, 0);
+	textfade = 0;
+	alarm[1] = 60;
 }

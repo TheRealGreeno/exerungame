@@ -3,4 +3,5 @@ hsp = clamp(hsp, -15, -6);
 y = clamp(y, 206, 206);
 vsp = 0;
 grav = 0.4;
-depth = obj_tails.depth - 1;
+if room = hiddenpalace
+	sprite_index = spr_snail;

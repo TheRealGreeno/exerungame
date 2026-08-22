@@ -22,7 +22,8 @@ draw_text(240, 40, "HIGHSCORE:" + string(global.highscore) + (global.gamescore >
 pal_swap_set(obj_tails.spr_palette, obj_tails.palselect, 0);
 draw_sprite_ext(spr_gamble_icons_dupe, lifeicon, 40, 10, 2, 2, 0, c_white, 1);
 shader_reset();
-draw_text(50, 40, "HEALTH:" + string(global.lifes));
+var overheal = global.lifes - 10;
+draw_text(60, 40, "HEALTH:" + (global.lifes < 10 ? string(global.lifes) : "10") + (global.lifes > 10 ? ("+" + string(overheal)) : ""));
 draw_text(400, 0, "RINGS:" + string(global.ring));
 if global.combo > 0
 	draw_text(400, 40, "COMBO:" + string(global.combo));

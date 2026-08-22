@@ -29,7 +29,12 @@ function GMScript_hurttails()
 		}
 	}
 	else
+	{
 		shield = 0;
+		bubbled = 0;
+		flamed = 0;
+		thundered = 0;
+	}
 	if pspeed > 6
 		pspeed -= 5;
 	else

@@ -1,0 +1,1 @@
+textfade = 1;

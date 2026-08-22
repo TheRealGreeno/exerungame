@@ -1,6 +1,7 @@
 x += hsp;
 y += vsp;
 vsp += grav;
+hsp = (-obj_tails.pspeed) * 0.8;
 if image_index = 1
 	image_speed = 0.1;
 else

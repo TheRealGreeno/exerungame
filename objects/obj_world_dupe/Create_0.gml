@@ -14,6 +14,7 @@ alarm[1] = 5;
 alarm[0] = 150;
 alarm[3] = 50;
 alarm[2] = 1;
+alarm[4] = 10;
 fireef = 0;
 burning = 1;
 ini_open("gameData.ini");

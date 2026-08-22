@@ -9,6 +9,10 @@ if room = title
 		else if exe = "F"
 			exe = "W";
 		else if exe = "W"
+			exe = "P";
+		else if exe = "P"
+			exe = "shawn";
+		else if exe = "shawn"
 			exe = "S"
 		global.exe = exe;
 		GMScript_exespr();
@@ -26,6 +30,8 @@ if room = title
 		scr_sfx(sfx_halfscore, 0);
 		xscale = 2;
 		yscale = 0.5;
+		textfade = 0;
+		alarm[1] = 60;
 	}
 	else
 	{
@@ -45,6 +51,8 @@ if room = title
 			xscale = 2;
 			yscale = 0.5;
 			scr_sfx(sfx_halfscore, 0);
+			textfade = 0;
+			alarm[1] = 60;
 		}
 		else
 			scr_sfx(sfx_hurt, 0);

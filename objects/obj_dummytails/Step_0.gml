@@ -9,3 +9,7 @@ else if char = "K"
 	charnum = 1;
 else
 	charnum = 2;
+if textfade && textalpha > 0
+	textalpha -= 0.1;
+else if !textfade && textalpha < 1
+	textalpha += 0.1;

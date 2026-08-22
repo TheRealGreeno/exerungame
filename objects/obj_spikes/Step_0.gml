@@ -1,5 +1,6 @@
 x += hsp;
 y += vsp;
+hsp = (-obj_tails.pspeed) * 0.8;
 if y <= 206
 	vsp += grav;
 else

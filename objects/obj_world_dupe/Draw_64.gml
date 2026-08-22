@@ -15,7 +15,6 @@ if room = shop
 	draw_text(240, 0, "SHOP.");
 	draw_set_font(fnt_smallsans);
 	var highscoreadd = string(global.gamescore - global.highscore);
-	draw_text(140, 40,"RINGS:" + string(global.ring));
-	draw_text(360, 40, "NAME:" + global.name);
+	draw_text(240, 40,"RINGS:" + string(global.ring));
 	draw_set_color(c_white);
 }

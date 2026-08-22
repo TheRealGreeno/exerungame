@@ -3,7 +3,7 @@ if global.unlockedpalettes[slot, obj_shop.char] != 0
 	if slot < 14
 		slot++;
 }
-if array_contains(obj_shop.purchased[obj_shop.palselect], obj_shop.palselect, obj_shop.char, 1) or slot >= 14 or global.ring < obj_shop.pricearray[obj_shop.palselect]
+if array_contains(obj_shop.purchased[obj_shop.palselect], obj_shop.palselect, obj_shop.char, 1) or global.ring < obj_shop.pricearray[obj_shop.palselect]
 	disabled = 1;
 else
 	disabled = 0;

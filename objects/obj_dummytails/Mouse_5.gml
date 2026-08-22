@@ -11,4 +11,6 @@ ini_write_real("playerinfo", "palette", global.palselect);
 ini_close();
 xscale = 2;
 yscale = 0.5;
+textfade = 0;
+alarm[0] = 60;
 scr_sfx(sfx_halfscore, 0);

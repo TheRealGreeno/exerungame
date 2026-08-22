@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sfx_speedbooster",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":0,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.68417233,
+  "exportDir":"",
+  "name":"sfx_speedbooster",
+  "parent":{
+    "name":"exerungame",
+    "path":"exerungame.yyp",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"sfx_speedbooster.ogg",
+  "volume":1.0,
+}

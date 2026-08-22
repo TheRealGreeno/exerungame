@@ -5,15 +5,6 @@ bg3x = groundx * 0.07;
 bg2x = groundx * 0.05;
 bg1x = groundx * 0.03;
 bg0x = groundx * 0.01;
-if palselect < 3 && !reverse
-	palselect += 0.1;
-else
-	reverse = 1;
-if palselect > 1 && reverse
-	palselect -= 0.1;
-else
-	reverse = 0;
-
 switch room
 {
 	case title:
@@ -34,6 +25,45 @@ switch room
 		draw_sprite_ext(bg_labyrinth2, 0, bg2x, 85, 9999, 1, 0, c_white, 1);
 		draw_sprite_ext(bg_labyrinth3, 0, bg3x, 149, 9999, 1, 0, c_white, 1);
 		draw_sprite_ext(bg_labyrinth4, 0, bg4x, 180, 9999, 1, 0, c_white, 1);
+		break;
+	case youcantrun:
+		draw_sprite_ext(bg_youcantrun0, 0, bg0x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun1, 0, bg5x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun3, 0, bg4x, 92, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun0, 0, bg3x, 124, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun1, 0, bg2x, 156, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun3, 0, bg1x, 188, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_youcantrun9, 0, bg0x, 202, 9999, 1, 0, c_white, 1);
+		break;
+	case hiddenpalace:
+		draw_sprite_ext(bg_hiddenpalace3, 0, bg2x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_hiddenpalace4, 0, bg1x, 76, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_hiddenpalace5, 0, bg0x, 92, 9999, 1, 0, c_white, 1);
+		pal_swap_set(palette_hiddenpalace, palselect, 0);
+		draw_sprite_ext(bg_hiddenpalace5, 0, bg0x, 92, 9999, 1, 0, c_white, 1);
+		shader_reset();
+		break;
+	case chemplant:
+		draw_sprite_ext(bg_chemplant, 0, bg0x, 60, 9999, 1, 0, c_white, 1);
+		break;
+	case casino:
+		draw_sprite_ext(bg_casino0, 0, bg0x, 0, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_casino1, 0, bg1x, 70, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_casino2, 0, bg2x, 135, 9999, 1, 0, c_white, 1);
+		pal_swap_set(palette_casino, palselect, 0);
+		draw_sprite_ext(bg_casino2, 0, bg2x, 135, 9999, 1, 0, c_white, 1);
+		shader_reset();
+		break;
+	case caves:
+		draw_sprite_ext(bg_caves0, 0, bg0x, 0, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves1, 0, bg5x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves3, 0, bg4x, 78, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves4, 0, bg3x, 85, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves5, 0, bg2x, 91, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves6, 0, bg3x, 139, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves7, 0, bg4x, 152, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves8, 0, bg5x, 171, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_caves9, 0, bg1x, 208, 9999, 1, 0, c_white, 1);
 		break;
 }
 fireef += 0.4;

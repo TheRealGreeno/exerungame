@@ -1,0 +1,10 @@
+draw_set_font(fnt_foundyou);
+draw_set_color(c_red);
+randomize();
+draw_text(irandom(480), irandom(270), "F0UND YOU");
+draw_text(irandom(480), irandom(270), "F0UND YOU");
+draw_text(irandom(480), irandom(270), "F0UND YOU");
+draw_text(irandom(480), irandom(270), "F0UND YOU");
+draw_set_font(fnt_foundyoubig);
+draw_text(240 + irandom_range(-5, 5), 135 + irandom_range(-5, 5), "F0UND YOU");
+draw_set_color(c_white);
