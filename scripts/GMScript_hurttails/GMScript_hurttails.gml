@@ -6,10 +6,11 @@ function GMScript_hurttails()
 	scr_sfx(sfx_hurt);
 	global.combo = 0;
 	global.combotime = 0;
+	global.noiselevel++;
 	if shield = 0
 	{
 		if global.lifes > 1
-			global.lifes--;
+			global.lifes = 10;
 		else
 		{
 			if !dead

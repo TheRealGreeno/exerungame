@@ -6,7 +6,6 @@ if other.powerup = 1 or other.flamed
 			instance_create(x, y, obj_debris);
 	}
 	scr_sfx(sfx_hardland, 0)
-	global.noiselevel++;
 	obj_camera.shake = 20;
 	global.ring += 5;
 	scr_sfx(sfx_ring, 0);
@@ -22,7 +21,6 @@ if other.state != 3 && other.powerup != 1 && !other.flamed
 			instance_create(x, y, obj_debris);
 	}
 	scr_sfx(sfx_hardland, 0)
-	global.noiselevel++;
 	obj_camera.shake = 20;
 	if global.ring > 0
 		global.ring--;

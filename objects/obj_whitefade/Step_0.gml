@@ -12,7 +12,7 @@ if fadealpha >= 1 && !fadeout
 		layer_set_visible("heatwavebg", true);
 		layer_set_visible("glow", false);
 		layer_set_visible("chaseglow", true);
-		if room = chemplant or room = greenhill
+		if room = chemplant or room = greenhill or room = marble
 			obj_world.burning = 1;
 	}
 	else

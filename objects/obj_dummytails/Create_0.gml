@@ -32,4 +32,4 @@ yscale = 1;
 textalpha = 0;
 textfade = 1;
 alpha = 0;
-global.levels = [greenhill, labyrinth, youcantrun, hiddenpalace, chemplant, casino, caves];
+global.levels = [greenhill, labyrinth, youcantrun, hiddenpalace, chemplant, casino, caves, marble];

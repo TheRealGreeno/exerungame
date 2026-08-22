@@ -9,25 +9,28 @@ if global.mu != noone
 		switch room
 		{
 			case greenhill:
-				global.mu = audio_play_sound(mu_greenhill, 10, false, 0.8, 0, 0.95);
+				global.mu = audio_play_sound(mu_greenhill, 10, true, 0.8, 0, 0.95);
 				break;
 			case labyrinth:
-				global.mu = audio_play_sound(mu_labyrinth, 10, false, 0.8, 0, 0.85);
+				global.mu = audio_play_sound(mu_labyrinth, 10, true, 0.8, 0, 0.85);
 				break;
 			case youcantrun:
-				global.mu = audio_play_sound(mu_youcantrun, 10, false, 0.8, 0, 0.6);
+				global.mu = audio_play_sound(mu_youcantrun, 10, true, 0.8, 0, 0.6);
 				break;
 			case hiddenpalace:
-				global.mu = audio_play_sound(mu_hiddenpalace, 10, false, 0.8, 0, 0.85);
+				global.mu = audio_play_sound(mu_hiddenpalace, 10, true, 0.8, 0, 0.85);
 				break;
 			case chemplant:
-				global.mu = audio_play_sound(mu_chemplant, 10, false, 0.8, 0, 0.95);
+				global.mu = audio_play_sound(mu_chemplant, 10, true, 0.8, 0, 0.95);
 				break;
 			case casino:
-				global.mu = audio_play_sound(mu_casino, 10, false, 0.8, 0, 0.9);
+				global.mu = audio_play_sound(mu_casino, 10, true, 0.8, 0, 0.9);
 				break;
 			case caves:
-				global.mu = audio_play_sound(mu_caves, 10, false, 0.8, 0, 0.85);
+				global.mu = audio_play_sound(mu_caves, 10, true, 0.8, 0, 0.85);
+				break;
+			case marble:
+				global.mu = audio_play_sound(mu_marble, 10, true, 0.8, 0, 0.85);
 				break;
 		}
 	}

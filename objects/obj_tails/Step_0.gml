@@ -89,11 +89,12 @@ if (state = 1 or state = 2) && char = "T"
 	tails = 1;
 else
 	tails = 0;
-if noiseleveldownbuff > 0
+if noiseleveldownbuff > 0 && global.noiselevel > 0
 	noiseleveldownbuff--
-else
+else if global.noiselevel > 0
 {
-	if global.noiselevel > 0
-		global.noiselevel--
-	noiseleveldownbuff = 350;
+	global.noiselevel--
+	noiseleveldownbuff = 450;
 }
+if pspeed > maxspeed / 1.5
+	instance_create(x, y, obj_afterimages);

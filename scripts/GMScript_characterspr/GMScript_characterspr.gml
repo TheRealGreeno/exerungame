@@ -26,6 +26,18 @@ function GMScript_characterspr()
 			maxspeed = 30;
 			jumpheight = 8;
 			break;
+		case "CDS":
+			spr_walk = spr_cdsonic_walk;
+			spr_dash = spr_cdsonic_dash;
+			spr_topspeed = spr_cdsonic_topspeed;
+			spr_roll = spr_cdsonic_roll;
+			spr_hurt = spr_cdsonic_hurt;
+			spr_dead = spr_cdsonic_dead;
+			spr_palette = palette_sonic;
+			palselect = 0;
+			maxspeed = 30;
+			jumpheight = 8;
+			break;
 		case "K":
 			spr_walk = spr_knuckles_walk;
 			spr_dash = spr_knuckles_dash;

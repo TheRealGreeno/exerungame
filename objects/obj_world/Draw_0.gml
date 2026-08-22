@@ -65,6 +65,15 @@ switch room
 		draw_sprite_ext(bg_caves8, 0, bg5x, 171, 9999, 1, 0, c_white, 1);
 		draw_sprite_ext(bg_caves9, 0, bg1x, 208, 9999, 1, 0, c_white, 1);
 		break;
+	case marble:
+		draw_sprite_ext(bg_marble0, 0, bg0x, 0, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble1, 0, bg0x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble2, 0, bg1x, 76, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble3, 0, bg2x, 92, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble4, 0, bg3x, 108, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble5, 0, bg4x, 124, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble6, 0, bg5x, 154, 9999, 1, 0, c_white, 1);
+		break;
 }
 fireef += 0.4;
 if burning

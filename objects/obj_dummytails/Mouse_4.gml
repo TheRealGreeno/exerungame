@@ -12,6 +12,9 @@ if !global.palettemode
 	ini_open("gameData.ini");
 	ini_write_string("playerinfo", "char", global.char);
 	ini_close();
+	ini_open("gameData.ini");
+	ini_write_real("playerinfo", "palette", global.palselect);
+	ini_close();
 	scr_sfx(sfx_halfscore, 0);
 	xscale = 2;
 	yscale = 0.5;
