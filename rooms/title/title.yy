@@ -15,6 +15,7 @@
     {"name":"inst_57E91A8","path":"rooms/title/title.yy",},
     {"name":"inst_49D7BFE2","path":"rooms/title/title.yy",},
     {"name":"inst_51061F35","path":"rooms/title/title.yy",},
+    {"name":"inst_5BEAA258","path":"rooms/title/title.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -28,6 +29,7 @@
         {"$GMRInstance":"v4","%Name":"inst_2FE898C4","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2FE898C4","objectId":{"name":"obj_text","path":"objects/obj_text/obj_text.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":240.0,"y":56.0,},
         {"$GMRInstance":"v4","%Name":"inst_49D7BFE2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_49D7BFE2","objectId":{"name":"obj_discord","path":"objects/obj_discord/obj_discord.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":440.0,"y":72.0,},
         {"$GMRInstance":"v4","%Name":"inst_51061F35","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_51061F35","objectId":{"name":"obj_dupebuster","path":"objects/obj_dupebuster/obj_dupebuster.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5BEAA258","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5BEAA258","objectId":{"name":"obj_jukebox","path":"objects/obj_jukebox/obj_jukebox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":40.0,"y":88.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"Effect_5","depth":200,"effectEnabled":true,"effectType":"_filter_greyscale","gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_5","properties":[
         {"name":"g_Intensity","type":0,"value":"0.65",},

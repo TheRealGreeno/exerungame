@@ -27,7 +27,7 @@ if global.mu != noone
 				global.mu = audio_play_sound(mu_casino, 10, false, 0.8, 0, 0.9);
 				break;
 			case caves:
-				global.mu = audio_play_sound(mu_wood, 10, false, 0.8, 0, 0.85);
+				global.mu = audio_play_sound(mu_caves, 10, false, 0.8, 0, 0.85);
 				break;
 		}
 	}
@@ -39,7 +39,7 @@ if global.mu != noone
 	if obj_tails.powerup = 1 && !audio_is_playing(mu_invincibility)
 	{
 		audio_pause_sound(global.mu);
-		global.pmu = audio_play_sound(mu_invincibility, 10, 0, 0.8, 0, 0.95);
+		global.pmu = audio_play_sound(mu_invincibility, 10, false, 0.8, 0, 0.95);
 	}
 	if obj_tails.powerup != 2 && audio_is_playing(mu_speedshoes)
 	{
@@ -49,7 +49,7 @@ if global.mu != noone
 	if obj_tails.powerup = 2 && !audio_is_playing(mu_speedshoes)
 	{
 		audio_pause_sound(global.mu);
-		global.pmu = audio_play_sound(mu_speedshoes, 10, 0, 0.8, 0, 0.95);
+		global.pmu = audio_play_sound(mu_speedshoes, 10, false, 0.8, 0, 0.95);
 	}
 	if !obj_exe.gotime && room = greenhill && dummyvar
 		audio_sound_pitch(mu_greenhill, 1 - (global.seconds * 0.005))

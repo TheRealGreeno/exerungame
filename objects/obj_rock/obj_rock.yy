@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bigrock",
-    "path":"sprites/spr_bigrock/spr_bigrock.yy",
+    "name":"spr_rock",
+    "path":"sprites/spr_rock/spr_rock.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -20,6 +20,7 @@ if fadealpha >= 1 && !fadeout
 		layer_set_visible("chaseglow", true);
 		layer_set_visible("flowerycolor", true);
 		layer_set_visible("glow", false);
+		layer_set_visible("levelfog", false);
 		layer_set_visible("flowerypetal", true);
 	}
 	fadeout = 1;

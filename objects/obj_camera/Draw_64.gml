@@ -27,4 +27,4 @@ draw_text(60, 40, "HEALTH:" + (global.lifes < 10 ? string(global.lifes) : "10") 
 draw_text(400, 0, "RINGS:" + string(global.ring));
 if global.combo > 0
 	draw_text(400, 40, "COMBO:" + string(global.combo));
-draw_text(400, 20, global.seconds < 100 ? "TIME LEFT:" + string(100 - global.seconds) : "RUNRUNRUN");
+draw_sprite(spr_noiseind, !obj_exe.gotime ? global.noiselevel : 5, 400, 20);

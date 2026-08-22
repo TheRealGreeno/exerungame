@@ -152,7 +152,7 @@
         {"name":"g_ColourBalanceHighlights","type":0,"value":"0",},
         {"name":"g_ColourBalanceHighlights","type":0,"value":"0",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMREffectLayer":"","%Name":"levelheatwave","depth":800,"effectEnabled":true,"effectType":"_filter_fractal_noise","gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"levelheatwave","properties":[
+    {"$GMREffectLayer":"","%Name":"levelfog","depth":800,"effectEnabled":true,"effectType":"_filter_fractal_noise","gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"levelfog","properties":[
         {"name":"g_FractalNoiseScale","type":0,"value":"164",},
         {"name":"g_FractalNoisePersistence","type":0,"value":"0.4",},
         {"name":"g_FractalNoiseOffset","type":0,"value":"0",},

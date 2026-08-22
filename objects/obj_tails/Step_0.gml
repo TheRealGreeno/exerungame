@@ -65,7 +65,7 @@ if global.gamescore >= global.highscore / 2 && !halfscore
 if global.debug = 1
 {
 	if keyboard_check_pressed(ord("1"))
-		global.seconds = 100;
+		global.noiselevel = 5;
 	if keyboard_check_pressed(ord("2"))
 		room_goto_next();
 	if keyboard_check_pressed(ord("4"))
@@ -89,3 +89,11 @@ if (state = 1 or state = 2) && char = "T"
 	tails = 1;
 else
 	tails = 0;
+if noiseleveldownbuff > 0
+	noiseleveldownbuff--
+else
+{
+	if global.noiselevel > 0
+		global.noiselevel--
+	noiseleveldownbuff = 350;
+}

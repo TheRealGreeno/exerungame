@@ -49,7 +49,7 @@ if instance_exists(obj_tails)
 			image_speed = espeed * 0.1;
 		else
 			image_speed = 1.5;
-		if global.seconds = 100
+		if global.noiselevel > 4
 			gotime = 1;
 	}
 	else
