@@ -22,6 +22,15 @@ switch room
 	case caves:
 		levelobstacle = obj_cavesspikes;
 		break;
+	case flowercastle:
+		levelobstacle = obj_fcbaddie;
+		break;
+	case palmtreeparadise:
+		levelobstacle = obj_warioblock;
+		break;
+	case tower:
+		levelobstacle = obj_rat;
+		break;
 }
 obstaclearray = [obj_evilwhiteball, obj_groundpillar, levelobstacle];
 if !instance_exists(obj_whitefade)

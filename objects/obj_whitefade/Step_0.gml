@@ -8,17 +8,19 @@ if fadealpha >= 1 && !fadeout
 	if !obj_exe.flowery
 	{
 		layer_set_visible("firecolor", true);
+		layer_set_visible("levelcolor", false);
 		layer_set_visible("heatwavefg", true);
 		layer_set_visible("heatwavebg", true);
 		layer_set_visible("glow", false);
 		layer_set_visible("chaseglow", true);
-		if room = chemplant or room = greenhill or room = marble
+		if room = chemplant or room = greenhill or room = marble or room = palmtreeparadise
 			obj_world.burning = 1;
 	}
 	else
 	{
 		layer_set_visible("chaseglow", true);
 		layer_set_visible("flowerycolor", true);
+		layer_set_visible("levelcolor", false);
 		layer_set_visible("glow", false);
 		layer_set_visible("levelfog", false);
 		layer_set_visible("flowerypetal", true);

@@ -67,12 +67,25 @@ switch room
 		break;
 	case marble:
 		draw_sprite_ext(bg_marble0, 0, bg0x, 0, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble1, 0, bg0x, 60, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble2, 0, bg1x, 76, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble3, 0, bg2x, 92, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble4, 0, bg3x, 108, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble5, 0, bg4x, 124, 9999, 1, 0, c_white, 1);
-		draw_sprite_ext(bg_marble6, 0, bg5x, 154, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble1, 0, bg5x, 60, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble2, 0, bg4x, 76, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble3, 0, bg3x, 92, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble4, 0, bg2x, 108, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble5, 0, bg1x, 124, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_marble6, 0, bg2x, 154, 9999, 1, 0, c_white, 1);
+		break;
+	case flowercastle:
+		draw_sprite_ext(bg_flowercastle0, 0, bg0x, 0, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_flowercastle1, 0, bg1x, 136, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_flowercastle2, 0, bg2x, 146, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_flowercastle3, 0, bg3x, 156, 9999, 1, 0, c_white, 1);
+		break;
+	case palmtreeparadise:
+		draw_sprite_ext(bg_palmtreeparadise, 60, bg1x, 0, 9999, 2, 0, c_white, 1);
+		break;
+	case tower:
+		draw_sprite_ext(bg_tower0, 0, bgstillx, 0, 9999, 1, 0, c_white, 1);
+		draw_sprite_ext(bg_tower1, 0, bg2x, 0, 9999, 1, 0, c_white, 1);
 		break;
 }
 fireef += 0.4;

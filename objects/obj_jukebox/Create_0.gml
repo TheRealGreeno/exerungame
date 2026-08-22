@@ -1,4 +1,4 @@
-palselect = 0;
+palselect = irandom(12);
 music = 0;
 textalpha = 0;
 textfadein = 0;

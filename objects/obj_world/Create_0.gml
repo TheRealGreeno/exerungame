@@ -4,6 +4,7 @@ bg2x = 0;
 bg3x = 0;
 bg4x = 0;
 bg5x = 0;
+bgstillx = 0;
 groundx = 0;
 palselect = 1;
 reverse = 0;

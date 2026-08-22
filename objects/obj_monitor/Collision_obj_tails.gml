@@ -13,7 +13,7 @@ if other.state = 1 or other.state = 2
 	if contained <= 2 && contained > 0
 	{
 		other.powerup = contained;
-		other.alarm[1] = 1650;
+		other.alarm[1] = 2000;
 	}
 	else if contained > 0 && contained < 6
 	{
@@ -37,6 +37,15 @@ if other.state = 1 or other.state = 2
 	{
 		global.ring += 10;
 		scr_sfx(sfx_ring, 0)
+		repeat 10
+		{
+			with instance_create(x, y, obj_debris)
+			{
+				sprite_index = spr_ring;
+				image_speed = 0;
+				image_index = irandom(3);
+			}
+		}
 	}
 		
 	image_index = 1;

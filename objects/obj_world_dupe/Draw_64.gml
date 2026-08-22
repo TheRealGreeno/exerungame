@@ -8,6 +8,7 @@ if gonermaker
 if room = shop
 {
 	draw_rectangle_color(0, 0, 480, 60, c_black, c_black, c_black, c_black, 0);
+	draw_rectangle_color(0, 210, 480, 270, c_black, c_black, c_black, c_black, 0);
 	draw_set_font(fnt_bigsans);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);

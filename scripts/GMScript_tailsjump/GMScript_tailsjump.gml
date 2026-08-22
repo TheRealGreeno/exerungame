@@ -94,7 +94,6 @@ function GMScript_tailsjump()
 				scr_sfx(sfx_hardland)
 				scr_sfx(sfx_land)
 				obj_camera.shake = 20;
-				global.noiselevel++;
 				glideslam = 0;
 			}
 			if dropdash

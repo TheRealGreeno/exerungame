@@ -9,6 +9,15 @@ if other.powerup = 1 or other.flamed
 	obj_camera.shake = 20;
 	global.ring += 5;
 	scr_sfx(sfx_ring, 0);
+	repeat 5
+	{
+		with instance_create(x, y, obj_debris)
+		{
+			sprite_index = spr_ring;
+			image_speed = 0;
+			image_index = irandom(3);
+		}
+	}
 	instance_destroy();
 }
 if other.state != 3 && other.powerup != 1 && !other.flamed

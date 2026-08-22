@@ -12,7 +12,7 @@ if global.mu != noone
 				global.mu = audio_play_sound(mu_greenhill, 10, true, 0.8, 0, 0.95);
 				break;
 			case labyrinth:
-				global.mu = audio_play_sound(mu_labyrinth, 10, true, 0.8, 0, 0.85);
+				global.mu = audio_play_sound(mu_labyrinth, 10, true, 0.8, 0, 0.75);
 				break;
 			case youcantrun:
 				global.mu = audio_play_sound(mu_youcantrun, 10, true, 0.8, 0, 0.6);
@@ -31,6 +31,15 @@ if global.mu != noone
 				break;
 			case marble:
 				global.mu = audio_play_sound(mu_marble, 10, true, 0.8, 0, 0.85);
+				break;
+			case flowercastle:
+				global.mu = audio_play_sound(mu_flowercastle, 10, true, 0.8, 0, 0.95);
+				break;
+			case palmtreeparadise:
+				global.mu = audio_play_sound(mu_palmtreeparadise, 10, true, 0.8, 0, 0.95);
+				break;
+			case tower:
+				global.mu = audio_play_sound(mu_tower, 10, true, 0.8, 0, 0.9);
 				break;
 		}
 	}

@@ -30,5 +30,5 @@ draw_text(400, 0, "RINGS:" + string(global.ring));
 if global.combo > 0
 	draw_text(400, (obj_tails.powerup ? 40 : 20), "COMBO:" + string(global.combo));
 if obj_tails.powerup != 0
-	draw_text(400, 20, "TIME LEFT:" + string(obj_tails.alarm[1]))
-draw_sprite(spr_noiseind, !obj_exe.gotime ? global.noiselevel : 5, 60, 40);
+	draw_text(400, 20, "TIME LEFT:" + string(round(obj_tails.alarm[1] * 0.01)))
+draw_sprite(spr_noiseind, !obj_exe.gotime ? global.noiselevel : 5, 60, 45);
