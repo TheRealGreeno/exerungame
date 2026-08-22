@@ -44,7 +44,7 @@ switch music
 		global.mu = audio_play_sound(mu_speedshoes, 10, true, 0.8, 0, 0.95);
 		break;
 	case 11:
-		global.mu = audio_play_sound(mu_chase, 10, 0, 0.8, true, 0.95);
+		global.mu = audio_play_sound(mu_chase, 10, true, 0.8, 0, 0.95);
 		break;
 	case 12:
 		global.mu = audio_play_sound(mu_robotnikchase, 10, true, 0.8, 0, 0.95);
