@@ -2,6 +2,7 @@ pspeed = 1;
 hsp = 0;
 vsp = 0;
 grav = 0.4;
+gravdef = grav;
 rolling = 0;
 jumping = 0;
 tails = 0;

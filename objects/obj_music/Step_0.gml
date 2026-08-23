@@ -1,6 +1,5 @@
 with obj_tails
 	var dis = distance_to_object(obj_exe)
-var dummyvar = 0;
 if global.mu != noone
 {
 	if !obj_exe.gotime && global.seconds < 0
@@ -63,8 +62,8 @@ if global.mu != noone
 		audio_pause_sound(global.mu);
 		global.pmu = audio_play_sound(mu_speedshoes, 10, false, 0.8, 0, 0.95);
 	}
-	if !obj_exe.gotime && room = greenhill && dummyvar
-		audio_sound_pitch(mu_greenhill, 1 - (global.seconds * 0.005))
+	// UNUSED if !obj_exe.gotime && room = greenhill
+	//		audio_sound_pitch(mu_greenhill, 1 - (global.seconds * 0.005))
 	switch obj_exe.exe
 	{
 		case "S":
@@ -88,7 +87,8 @@ if global.mu != noone
 	}
 	if obj_exe.gotime && !audio_is_playing(chasemu)
 	{
-		audio_stop_all()
+		audio_stop_sound(global.mu);
+		audio_stop_sound(global.pmu);
 		global.mu = audio_play_sound(chasemu, 10, true, 0.8, 0, 0.95)
 	}
 }

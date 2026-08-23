@@ -79,7 +79,7 @@ function GMScript_tailsjump()
 			flamed = 0;
 			flight = 0;
 			flightburst = 3;
-			grav = 0.4;
+			grav = gravdef;
 			state = 0;
 			y = 206;
 			if glide

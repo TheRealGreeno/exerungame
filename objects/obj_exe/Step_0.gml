@@ -17,7 +17,7 @@ if instance_exists(obj_tails)
 			hsp = espeed * 0.4;
 		else
 			hsp = espeed * 0.001;
-		if x < 192
+		if x < 64
 			x += hsp;
 		if gotime
 			y += vsp;
@@ -49,8 +49,8 @@ if instance_exists(obj_tails)
 			image_speed = espeed * 0.1;
 		else
 			image_speed = 1.5;
-		if global.noiselevel > 4
-			gotime = 1;
+		if global.noiselevel > 4 && alarm[2] <= 0 && !gotime
+			alarm[2] = 250;
 	}
 	else
 	{
