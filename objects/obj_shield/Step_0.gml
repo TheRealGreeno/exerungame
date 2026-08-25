@@ -1,6 +1,8 @@
 visible = obj_tails.shield;
 x = obj_tails.x;
 y = obj_tails.y + 5;
+image_xscale = obj_tails.xscale;
+image_yscale = obj_tails.yscale;
 overlayf += 0.5;
 if active
 	activef += 0.5;

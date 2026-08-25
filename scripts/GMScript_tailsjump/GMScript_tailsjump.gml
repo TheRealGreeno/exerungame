@@ -16,6 +16,8 @@ function GMScript_tailsjump()
 		grav = 0.05;
 		pspeed += 0.2;
 		hsp += 0.1;
+		squash = 1.2;
+		stretch = 0.8;
 		flightburst--
 	}
 	if flight
@@ -26,7 +28,7 @@ function GMScript_tailsjump()
 		if keydown2
 		{
 			flight = 0;
-			grav = 0.4;
+			grav = gravdef;
 		}
 	}
 	if char = "K" && keyjump2 && !shield && !glide
@@ -58,6 +60,8 @@ function GMScript_tailsjump()
 	{
 		vsp = -6;
 		thundered = 1;
+		squash = 2;
+		stretch = 0.5;
 		scr_sfx(sfx_thundershielduse, 0);
 		repeat irandom_range(5, 10)
 			instance_create(obj_shield.x + irandom_range(-10, 10), obj_shield.y + irandom_range(-10, 10), obj_sparks);
@@ -68,6 +72,8 @@ function GMScript_tailsjump()
 		hsp += 0.4;
 		pspeed += 4;
 		flamed = 1;
+		squash = 0.5;
+		stretch = 2;
 		scr_sfx(sfx_flameshielduse, 0);
 		obj_shield.active = 1;
 	}
@@ -81,6 +87,8 @@ function GMScript_tailsjump()
 			flightburst = 3;
 			grav = gravdef;
 			state = 0;
+			stretch = 2;
+			squash = 0.5;
 			y = 206;
 			if glide
 			{
@@ -100,6 +108,8 @@ function GMScript_tailsjump()
 			{
 				state = 2;
 				hsp += 0.4;
+				squash = 0.3;
+				stretch = 2.5;
 				if pspeed < maxspeed - 4
 					pspeed += 4;
 				dropdash = 0;
@@ -108,11 +118,14 @@ function GMScript_tailsjump()
 		}
 		else
 		{
-			vsp -= 10;
+			vsp = -10;
 			obj_shield.active = 1;
 			obj_shield.activef = 0;
 			bubbled = 0;
 			scr_sfx(sfx_bubbleshielduse, 0);
+			stretch = 2;
+			squash = 0.5;
+			y = 204;
 		}
 	}
 }

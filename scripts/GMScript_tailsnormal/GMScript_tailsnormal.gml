@@ -29,6 +29,8 @@ function GMScript_tailsnormal()
 			vsp -= jumpheight;
 			hsp += 0.2;
 			pspeed += 0.2;
+			squash = 2;
+			stretch = 0.5;
 		}
 
 		if keydown2 or downbuffer > 0
@@ -37,6 +39,8 @@ function GMScript_tailsnormal()
 			hsp += 0.4;
 			pspeed += 0.2;
 			scr_sfx(sfx_speedup, 0);
+			stretch = 2;
+			squash = 0.5;
 		}
 	}
 }

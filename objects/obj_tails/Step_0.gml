@@ -42,6 +42,14 @@ switch state
 		break;
 }
 
+xscale = stretch * sign(xscale);
+yscale = squash;
+
+if (stretch < 1 || stretch > 1)
+    stretch = lerp(stretch, 1, 0.1);
+
+if (squash < 1 || squash > 1)
+    squash = lerp(squash, 1, 0.1);
 if state = 1 || state = 2
 	mask_index = mask_tailsroll;
 else
@@ -82,6 +90,11 @@ if global.debug = 1
 		global.lifes++;
 	if keyboard_check_pressed(ord("7"))
 		pspeed = 99;
+	if keyboard_check_pressed(ord("8"))
+	{
+		with instance_create(x, y, obj_monitor)
+			contained = 3;
+	}
 }
 if powerup = 1
 	instance_create(x + irandom_range(-32, 32), y + irandom_range(-48, 16), obj_invincibilityeffect)

@@ -11,5 +11,7 @@ function GMScript_tailsroll()
 		state = 1;
 		scr_sfx(sfx_jump, 0);
 		vsp -= jumpheight;
+		squash = 2;
+		stretch = 0.5;
 	}
 }
