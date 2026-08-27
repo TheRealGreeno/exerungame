@@ -13,19 +13,23 @@ if instance_exists(obj_tails)
 			scr_sfx(choose(snd_flowery_voiceclip_hereicome, snd_flowery_voiceclip_hereicomesanfrandisc, snd_flowery_voiceclip_hereicomesanfrandisco_strong, snd_flowery_voiceclip_hereicomesanfrandisco_weak, snd_flowery_voiceclip_hey_boys, snd_flowery_voiceclip_heytherelittleguy), 0);
 			soundplayed = 1;
 		}
-		if x < 64
-			hsp = espeed * 0.4;
-		else
-			hsp = espeed * 0.001;
+		if sprite_index != spr_exe_dashprep
+		{
+			if x < 64
+				hsp = espeed * 0.4;
+			else
+				hsp = espeed * 0.001;
+		}
 		if x < 64
 			x += hsp;
 		if gotime
 			y += vsp;
 		if y <= 206 && gotime
 			vsp += grav;
+		if sprite_index = spr_exe_dashprep
+			hsp = (-obj_tails.pspeed) * 0.5;
 		if y > 206
 		{
-			sprite_index = spr_dash;
 			vsp = 0;
 			y = 206;
 			if !landed
@@ -41,7 +45,13 @@ if instance_exists(obj_tails)
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
 				}
-				instance_create(x, y, obj_whitefade);
+				if exe = "S"
+				{
+					sprite_index = spr_exe_dashprep;
+					alarm[3] = 60;
+				}
+				else
+					sprite_index = spr_dash;
 				landed = 1;
 			}
 		}

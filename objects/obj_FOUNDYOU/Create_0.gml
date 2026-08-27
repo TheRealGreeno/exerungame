@@ -1,3 +1,4 @@
-alarm[0] = 100;
+alarm[0] = 150;
 randomize();
-msg = irandom(2);
+msg = 1;
+faded = 0;

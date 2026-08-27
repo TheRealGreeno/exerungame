@@ -4,8 +4,8 @@ function GMScript_exespr()
 	{
 		case "S":
 			spr_dash = spr_exe_dash;
-			spr_roll = spr_exe_roll;
-			spr_defeat = spr_exe_intro;
+			spr_roll = spr_exe_fall;
+			spr_defeat = spr_exe_defeat;
 			break;
 		case "F":
 			spr_dash = spr_flowery_dash;

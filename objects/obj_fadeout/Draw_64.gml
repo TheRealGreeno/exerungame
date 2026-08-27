@@ -1,2 +1,4 @@
-draw_rectangle_color(0 + _x, 0, 480 + _x, 270, c_black, c_black, c_black, c_black, 0);
+gpu_set_blendmode(bm_subtract);
+draw_rectangle_color(0, 0, 480, 270, fadecolor, fadecolor, fadecolor, fadecolor, 0);
+gpu_set_blendmode(bm_normal);
 depth = -9999;
