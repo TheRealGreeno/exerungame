@@ -2,10 +2,10 @@ function GMScript_input()
 {
 	input = 
 	{
-		jump : (!instance_exists(obj_touchcontrols) ? keyboard_check(vk_space) : obj_touchcontrols.jump1),
-		jump2 : (!instance_exists(obj_touchcontrols) ? keyboard_check_pressed(vk_space) : obj_touchcontrols.jump2),
-		down : (!instance_exists(obj_touchcontrols) ? keyboard_check(vk_down) : obj_touchcontrols.down1),
-		down2 : (!instance_exists(obj_touchcontrols) ? keyboard_check_pressed(vk_down) : obj_touchcontrols.down2)
+		jump : keyboard_check(vk_space) or obj_touchcontrols.jump1,
+		jump2 : keyboard_check_pressed(vk_space) or obj_touchcontrols.jump2,
+		down : keyboard_check(vk_down) or obj_touchcontrols.down1,
+		down2 : keyboard_check_pressed(vk_down) or obj_touchcontrols.down2
 	}
 	if input.jump2
 		jumpbuffer = 10
