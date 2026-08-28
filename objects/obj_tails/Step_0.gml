@@ -55,7 +55,7 @@ if state = 1 || state = 2
 else
 	mask_index = mask_tails;
 
-if vsp < 0 && !keyjump && state = 1
+if vsp < 0 && !input.jump && state = 1
 	vsp /= 2;
 if global.gamescore > global.highscore && !highscorebeat
 {

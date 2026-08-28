@@ -6,7 +6,7 @@ if instance_exists(obj_tails)
 			sprite_index = spr_roll;
 		grav = !flowery ? 0.4 : 0.1
 		if gotime && y >= 206
-			espeed = obj_tails.maxspeed;
+			espeed = obj_tails.pspeed;
 		if gotime && !soundplayed && flowery
 		{
 			randomize();
@@ -41,7 +41,8 @@ if instance_exists(obj_tails)
 					scr_sfx(sfx_hardland);
 					scr_sfx(sfx_land);
 					obj_camera.shake = 80;
-					instance_create(x, y, obj_FOUNDYOU);
+					if exe = "S"
+						instance_create(x, y, obj_FOUNDYOU);
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
 				}
@@ -51,9 +52,19 @@ if instance_exists(obj_tails)
 					alarm[3] = 60;
 				}
 				else
+				{
 					sprite_index = spr_dash;
+					instance_create(x, y, obj_whitefade);
+				}
 				landed = 1;
 			}
+		}
+		if exe = "S" && sprite_index != spr_exe_dashprep
+		{
+			if espeed < 10
+				sprite_index = spr_exe_walk;
+			else
+				sprite_index = spr_exe_dash;
 		}
 		if espeed < 10
 			image_speed = espeed * 0.1;

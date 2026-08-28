@@ -6,7 +6,7 @@ function GMScript_tailspush()
 	x -= (pspeed * 0.5);
 	hsp = 0;
 	pspeed = 2;
-	if keyjump2
+	if input.jump2
 	{
 		state = 1;
 		vsp -= 8;

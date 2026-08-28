@@ -90,7 +90,7 @@ switch room
 }
 fireef += 0.4;
 if burning
-	draw_sprite_ext(spr_firee, fireef, 0, 0, 1, 1, 0, c_white, 0.5);
+	draw_sprite_ext(spr_firee, fireef, bg5x, 0, 9999, 1, 0, c_white, 0.5);
 image_speed = 0.1
 // UNUSED draw_sprite_ext(ground_greenhill, -1, groundx, 16, 9999, 1, 0, c_white, 1);
 layer_x("Ground", groundx)

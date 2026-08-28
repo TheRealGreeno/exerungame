@@ -6,7 +6,7 @@ function GMScript_tailsroll()
 		pspeed -= 0.01;
 		hsp -= 0.01;
 	}
-	if keyjump2
+	if input.jump2
 	{
 		state = 1;
 		scr_sfx(sfx_jump, 0);

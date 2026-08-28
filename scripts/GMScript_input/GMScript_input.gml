@@ -1,15 +1,15 @@
 function GMScript_input()
 {
-	if !instance_exists(obj_touchcontrols)
+	input = 
 	{
-		keyjump = keyboard_check(vk_space);
-		keyjump2 = keyboard_check_pressed(vk_space);
-		keydown = keyboard_check(vk_down);
-		keydown2 = keyboard_check_pressed(vk_down);
+		jump : (!instance_exists(obj_touchcontrols) ? keyboard_check(vk_space) : obj_touchcontrols.jump1),
+		jump2 : (!instance_exists(obj_touchcontrols) ? keyboard_check_pressed(vk_space) : obj_touchcontrols.jump2),
+		down : (!instance_exists(obj_touchcontrols) ? keyboard_check(vk_down) : obj_touchcontrols.down1),
+		down2 : (!instance_exists(obj_touchcontrols) ? keyboard_check_pressed(vk_down) : obj_touchcontrols.down2)
 	}
-	if keyjump2
+	if input.jump2
 		jumpbuffer = 10
-	if keydown2
+	if input.down2
 		downbuffer = 10
 	if jumpbuffer > 0
 		jumpbuffer--

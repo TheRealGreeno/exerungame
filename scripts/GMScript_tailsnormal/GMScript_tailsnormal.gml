@@ -11,9 +11,9 @@ function GMScript_tailsnormal()
 		if pspeed < maxspeed
 		{
 			if powerup != 2
-				pspeed += !obj_exe.gotime ? 0.01 : 1.5;
+				pspeed += !obj_exe.gotime ? 0.01 : 0.05;
 			else
-				pspeed += !obj_exe.gotime ? 0.1 : 2.5;
+				pspeed += !obj_exe.gotime ? 0.1 : 0.5;
 		}
 
 		if pspeed < maxspeed / 4
@@ -22,7 +22,7 @@ function GMScript_tailsnormal()
 			sprite_index = spr_dash;
 		else
 			sprite_index = spr_topspeed;
-		if keyjump2 or jumpbuffer > 0
+		if input.jump2 or jumpbuffer > 0
 		{
 			state = 1;
 			scr_sfx(sfx_jump, 0);
@@ -33,7 +33,7 @@ function GMScript_tailsnormal()
 			stretch = 0.5;
 		}
 
-		if keydown2 or downbuffer > 0
+		if input.down2 or downbuffer > 0
 		{
 			state = 2;
 			hsp += 0.4;
