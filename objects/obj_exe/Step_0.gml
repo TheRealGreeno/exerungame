@@ -13,7 +13,7 @@ if instance_exists(obj_tails)
 			scr_sfx(choose(snd_flowery_voiceclip_hereicome, snd_flowery_voiceclip_hereicomesanfrandisc, snd_flowery_voiceclip_hereicomesanfrandisco_strong, snd_flowery_voiceclip_hereicomesanfrandisco_weak, snd_flowery_voiceclip_hey_boys, snd_flowery_voiceclip_heytherelittleguy), 0);
 			soundplayed = 1;
 		}
-		if sprite_index != spr_exe_dashprep
+		if sprite_index != spr_dashprep
 		{
 			if x < 64
 				hsp = espeed * 0.4;
@@ -26,7 +26,7 @@ if instance_exists(obj_tails)
 			y += vsp;
 		if y <= 206 && gotime
 			vsp += grav;
-		if sprite_index = spr_exe_dashprep
+		if sprite_index = spr_dashprep
 			hsp = (-obj_tails.pspeed) * 0.5;
 		if y > 206
 		{
@@ -46,9 +46,9 @@ if instance_exists(obj_tails)
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
 				}
-				if exe = "S"
+				if standardexe
 				{
-					sprite_index = spr_exe_dashprep;
+					sprite_index = spr_dashprep;
 					alarm[3] = 60;
 				}
 				else
@@ -59,12 +59,14 @@ if instance_exists(obj_tails)
 				landed = 1;
 			}
 		}
-		if exe = "S" && sprite_index != spr_exe_dashprep
+		if standardexe && sprite_index != spr_dashprep && y >= 206
 		{
-			if espeed < 10
-				sprite_index = spr_exe_walk;
+			if espeed < obj_tails.maxspeed / 4
+				sprite_index = spr_walk;
+			else if espeed < obj_tails.maxspeed / 2
+				sprite_index = spr_dash;
 			else
-				sprite_index = spr_exe_dash;
+				sprite_index = spr_topspeed;
 		}
 		if espeed < 10
 			image_speed = espeed * 0.1;
@@ -95,7 +97,7 @@ else
 		vsp += grav;
 	if y > 206
 	{
-		sprite_index = spr_dash;
+		sprite_index = (!standardexe ? spr_dash : spr_topspeed);
 		vsp = 0;
 		y = 206;
 		if !landed
@@ -123,20 +125,22 @@ else
 	flowery = 0;
 if exe = "S"
 	exenum = 0;
-else if exe = "R"
+else if exe = "E"
 	exenum = 1;
-else if exe = "F"
+else if exe = "R"
 	exenum = 2;
-else if exe = "W"
+else if exe = "F"
 	exenum = 3;
-else if exe = "P"
+else if exe = "W"
 	exenum = 4;
-else
+else if exe = "P"
 	exenum = 5;
+else
+	exenum = 6;
 if exe != "S"
 	palselect = 0;
 if room = title
-	mask_index = spr_dash;
+	mask_index = (standardexe ? spr_dash : spr_topspeed);
 else
 	mask_index = mask_exe;
 if textfade && textalpha > 0

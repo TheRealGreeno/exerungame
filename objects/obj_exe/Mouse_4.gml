@@ -3,6 +3,8 @@ if room = title
 	if !global.palettemode
 	{
 		if exe = "S"
+			exe = "E";
+		else if exe = "E"
 			exe = "R";
 		else if exe = "R"
 			exe = "F";
@@ -13,7 +15,7 @@ if room = title
 		else if exe = "P"
 			exe = "shawn";
 		else if exe = "shawn"
-			exe = "S"
+			exe = "S";
 		global.exe = exe;
 		GMScript_exespr();
 		sprite_index = spr_dash;

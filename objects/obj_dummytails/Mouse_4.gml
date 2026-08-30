@@ -1,11 +1,29 @@
 if !global.palettemode
 {
-	if char = "T"
-		char = "K";
-	else if char = "K"
-		char = "S";
-	else if char = "S"
-		char = "T";
+	if !global.debug
+	{
+		if char = "T"
+			char = "K";
+		else if char = "K"
+			char = "S";
+		else if char = "S"
+			char = "T";
+	}
+	else
+	{
+		if char = "T"
+			char = "K";
+		else if char = "K"
+			char = "S";
+		else if char = "S"
+			char = "CDS";
+		else if char = "CDS"
+			char = "MS";
+		else if char = "MS"
+			char = "EXE";
+		else if char = "EXE"
+			char = "T";
+	}
 	GMScript_characterspr();
 	global.char = char;
 	global.palselect = palselect;

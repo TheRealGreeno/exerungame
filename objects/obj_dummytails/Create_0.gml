@@ -1,9 +1,15 @@
 char = !variable_global_exists("char") ? "T" : global.char;
+chararray = ["T", "K", "S"]
 GMScript_characterspr();
 palselect = !variable_global_exists("palselect") ? 0 : global.palselect;
 ini_open("gameData.ini");
 global.palselect = ini_read_real("playerinfo", "palette", 0);
 global.char = ini_read_string("playerinfo", "char", "T");
+if !array_contains(chararray, global.char) && !global.debug
+{
+	global.char = "T";
+	ini_write_string("playerinfo", "char", "T");
+}
 global.ring = ini_read_real("game", "ring", 0);
 ini_close();
 global.palettemode = 0;
@@ -26,10 +32,10 @@ else
 }
 ini_close();
 charname = ["TAILS", "KNUCKLES", "SONIC"]
-palettename = [["ALAN", "DAVE", "PAUL"], ["CLASSIC SHOES", "BLUE SOCKS", "BLUE SHOES"], ["LACK O' COLOR THEORY", "RED KNUCKLES", "IMITATION SHOES"], ["SEE HE'S FINE!", "RED SOCKS", "ORANGE SHOES"], ["SUPER SHOES", "NPC KNUX", "THE HEDGEHOG"], ["SIMPLE AND SLEEK", "CRIMSON KNUX", "GREEN SHOES"], ["FEELIN' BLUE", "EVAD", "HELLHOG"], ["NALA", "SILVER KNUCKLE", "SILVER SONIC"], ["DARK FOX", "KNUX WITH JAUNDICE", "JAUNDICE SONIC"], ["THE BROWN FOX JUMPED\nOVER THE LAZY EXE", "PISSKLES", "HEDGEHOG MANIA"], ["PISS TAILS", "MARIJKNUCKLES", "MARIJONIC"], ["BLOODY FOX", "GRUCKLES", "SUPER SONIC"], ["SHAMBLING FOX", "BLUCKLES", "HIS BEST FRIEND"], ["FIREFOX", "JA     ORANGE", "HIS BEST ENEMY"], ["POLYESTER TAILS", "POLYESTER KNUCKLES", "POLYESTER SONIC"]]
+palettename = [["ALAN", "DAVE", "TOM"], ["CLASSIC SHOES", "BLUE SOCKS", "BLUE SHOES"], ["LACK O' COLOR THEORY", "RED KNUCKLES", "IMITATION SHOES"], ["SEE HE'S FINE!", "RED SOCKS", "ORANGE SHOES"], ["SUPER SHOES", "NPC KNUX", "THE HEDGEHOG"], ["SIMPLE AND SLEEK", "CRIMSON KNUX", "GREEN SHOES"], ["FEELIN' BLUE", "EVAD", "HELLHOG"], ["NALA", "SILVER KNUCKLE", "SILVER SONIC"], ["DARK FOX", "KNUX WITH JAUNDICE", "JAUNDICE SONIC"], ["THE BROWN FOX JUMPED\nOVER THE LAZY EXE", "PISSKLES", "HEDGEHOG MANIA"], ["PISS TAILS", "MARIJKNUCKLES", "MARIJONIC"], ["BLOODY FOX", "GRUCKLES", "SUPER SONIC"], ["SHAMBLING FOX", "BLUCKLES", "HIS BEST FRIEND"], ["FIREFOX", "JA     ORANGE", "HIS BEST ENEMY"], ["POLYESTER TAILS", "POLYESTER KNUCKLES", "POLYESTER SONIC"]]
 xscale = 1;
 yscale = 1;
 textalpha = 0;
 textfade = 1;
-alpha = 0;
-global.levels = [greenhill, labyrinth, youcantrun, hiddenpalace, chemplant, casino, caves, marble, flowercastle, palmtreeparadise, tower];
+alpha = 1;
+global.levels = [greenhill, marble, labyrinth, youcantrun, chemplant, casino, caves, hiddenpalace];

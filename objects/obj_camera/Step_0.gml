@@ -8,12 +8,3 @@ camera_set_view_pos(view_camera[0], camx  + irandom_range(-shake, shake), camy  
 camera_set_view_size(view_camera[0], 480, 270);
 if shake > 0
 	shake *= 0.8;
-
-if (keyboard_check_pressed(vk_f5))
-{
-    global.fullscreen = !global.fullscreen;
-    ini_open("gameData.ini");
-    ini_write_real("settings", "fullscreen", global.fullscreen);
-    ini_close();
-    window_set_fullscreen(global.fullscreen);
-}
