@@ -41,7 +41,7 @@ if instance_exists(obj_tails)
 					scr_sfx(sfx_hardland);
 					scr_sfx(sfx_land);
 					obj_camera.shake = 80;
-					if exe = "S"
+					if standardexe
 						instance_create(x, y, obj_FOUNDYOU);
 					if jokevoiceline = 1
 						scr_sfx(sfx_exejokevoiceline, 0);
